@@ -54,6 +54,7 @@ def timeit(func):
 ## Dataset Loading
 ##########################################################################
 
+
 def get_data_home(data_home=None):
     """
     Returns the path of the data directory
@@ -66,6 +67,7 @@ def get_data_home(data_home=None):
         os.makedirs(data_home)
 
     return data_home
+
 
 def load_data(path, descr=None, target_index=-1):
     """
@@ -120,11 +122,11 @@ def load_data(path, descr=None, target_index=-1):
 
     # Target assumed to be either last or first row
     if target_index == -1:
-        data   = dataset[:,0:-1]
-        target = dataset[:,-1]
+        data   = dataset[:, 0:-1]
+        target = dataset[:, -1]
     elif target_index == 0:
-        data   = dataset[:,1:]
-        target = dataset[:,0]
+        data   = dataset[:, 1:]
+        target = dataset[:, 0]
     else:
         raise ValueError("Target index must be either -1 or 0")
 
@@ -135,5 +137,21 @@ def load_data(path, descr=None, target_index=-1):
                  feature_names=feature_names,
                  DESCR=DESCR)
 
+
 def load_wheat():
     return load_data('wheat')
+
+
+def load_energy():
+    """
+    Loads the energy data set by creates a target set of Y1 and Y2 and makes
+    target a function that can select between the two variables.
+    """
+    data = load_data('energy')
+    data._target_set = {'Y2': data.target}
+    data._target_set['Y1'] = data.data[:, -1]
+    data.data = data.data[:, 0:-1]
+
+    data.target = lambda k: data._target_set[k]
+
+    return data
