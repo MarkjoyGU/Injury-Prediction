@@ -31,9 +31,7 @@ def elliot(x):
 def linear(x):
     if x > 1:
         return 1
-    if x < 0:
-        return -1
-    return x
+    return 0
 
 
 @np.vectorize
