@@ -62,6 +62,7 @@ venv
 # Only compressed data
 data/*
 !data/*.tgz
+!data/*.gz
 
 # Ignore pickles
 code/*.pickle
