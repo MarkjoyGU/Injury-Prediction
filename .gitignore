@@ -63,6 +63,7 @@ venv
 data/*
 !data/*.tgz
 !data/*.gz
+!data/*.zip
 
 # Ignore pickles
 code/*.pickle
