@@ -67,4 +67,4 @@ print "Total time: %0.3f seconds" % (eval_time-start_time)
 # Save the model to disk
 with open('abaloneModel.pickle', 'w') as f:
     pickle.dump(model, f)
-
+    
