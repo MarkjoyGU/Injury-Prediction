@@ -1,0 +1,15 @@
+archer
+athlete
+golf
+crew
+cycling
+baseball
+basketball
+football
+bat
+hockey
+gear
+cleats
+vault
+soccer
+quarterback

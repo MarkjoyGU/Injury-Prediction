@@ -1,0 +1,17 @@
+accumulation
+air
+drizzle
+drought
+fall
+flurry
+fog
+climate
+calm
+sun
+normal
+nimbus
+wind
+rain
+sunrise
+twilight
+
