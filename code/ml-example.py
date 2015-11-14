@@ -211,6 +211,10 @@ def _run_ml_algo(ds_name, df, model, model_name, **kwargs):
     print classificationReport
     _plot_classification_report(classificationReport, ds_name, model_name)
 
+    #train the model over the entire dataset before storing it on disk
+    estimator = model(**kwargs) 
+    estimator.fit(X, y)
+
     #now write the model to a pickle
     outpath = ds_name + '_' + model_name + ".pickle"
     with open(outpath, 'w') as f:
