@@ -1,0 +1,4 @@
+data/adult.*
+data/README.md
+data/classifier.pickle
+data/meta.json
