@@ -69,3 +69,4 @@ data/*
 code/*.pickle
 
 .ipynb_checkpoints
+data/products.csv

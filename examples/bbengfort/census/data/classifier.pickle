@@ -1,0 +1,673 @@
+ccopy_reg
+_reconstructor
+p0
+(csklearn.pipeline
+Pipeline
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'steps'
+p6
+(lp7
+(S'encoder'
+p8
+g0
+(c__main__
+EncodeCategorical
+p9
+g2
+Ntp10
+Rp11
+(dp12
+S'encoders'
+p13
+(dp14
+Vworkclass
+p15
+g0
+(csklearn.preprocessing.label
+LabelEncoder
+p16
+g2
+Ntp17
+Rp18
+(dp19
+S'classes_'
+p20
+cnumpy.core.multiarray
+_reconstruct
+p21
+(cnumpy
+ndarray
+p22
+(I0
+tp23
+S'b'
+p24
+tp25
+Rp26
+(I1
+(I9
+tp27
+cnumpy
+dtype
+p28
+(S'O8'
+p29
+I0
+I1
+tp30
+Rp31
+(I3
+S'|'
+p32
+NNNI-1
+I-1
+I63
+tp33
+bI00
+(lp34
+S' ?'
+p35
+aS' Federal-gov'
+p36
+aS' Local-gov'
+p37
+aS' Never-worked'
+p38
+aS' Private'
+p39
+aS' Self-emp-inc'
+p40
+aS' Self-emp-not-inc'
+p41
+aS' State-gov'
+p42
+aS' Without-pay'
+p43
+atp44
+bsbsVrelationship
+p45
+g0
+(g16
+g2
+Ntp46
+Rp47
+(dp48
+g20
+g21
+(g22
+(I0
+tp49
+g24
+tp50
+Rp51
+(I1
+(I6
+tp52
+g31
+I00
+(lp53
+S' Husband'
+p54
+aS' Not-in-family'
+p55
+aS' Other-relative'
+p56
+aS' Own-child'
+p57
+aS' Unmarried'
+p58
+aS' Wife'
+p59
+atp60
+bsbsVsex
+p61
+g0
+(g16
+g2
+Ntp62
+Rp63
+(dp64
+g20
+g21
+(g22
+(I0
+tp65
+g24
+tp66
+Rp67
+(I1
+(I2
+tp68
+g31
+I00
+(lp69
+S' Female'
+p70
+aS' Male'
+p71
+atp72
+bsbsVrace
+p73
+g0
+(g16
+g2
+Ntp74
+Rp75
+(dp76
+g20
+g21
+(g22
+(I0
+tp77
+g24
+tp78
+Rp79
+(I1
+(I5
+tp80
+g31
+I00
+(lp81
+S' Amer-Indian-Eskimo'
+p82
+aS' Asian-Pac-Islander'
+p83
+aS' Black'
+p84
+aS' Other'
+p85
+aS' White'
+p86
+atp87
+bsbsVnative-country
+p88
+g0
+(g16
+g2
+Ntp89
+Rp90
+(dp91
+g20
+g21
+(g22
+(I0
+tp92
+g24
+tp93
+Rp94
+(I1
+(I42
+tp95
+g31
+I00
+(lp96
+S' ?'
+p97
+aS' Cambodia'
+p98
+aS' Canada'
+p99
+aS' China'
+p100
+aS' Columbia'
+p101
+aS' Cuba'
+p102
+aS' Dominican-Republic'
+p103
+aS' Ecuador'
+p104
+aS' El-Salvador'
+p105
+aS' England'
+p106
+aS' France'
+p107
+aS' Germany'
+p108
+aS' Greece'
+p109
+aS' Guatemala'
+p110
+aS' Haiti'
+p111
+aS' Holand-Netherlands'
+p112
+aS' Honduras'
+p113
+aS' Hong'
+p114
+aS' Hungary'
+p115
+aS' India'
+p116
+aS' Iran'
+p117
+aS' Ireland'
+p118
+aS' Italy'
+p119
+aS' Jamaica'
+p120
+aS' Japan'
+p121
+aS' Laos'
+p122
+aS' Mexico'
+p123
+aS' Nicaragua'
+p124
+aS' Outlying-US(Guam-USVI-etc)'
+p125
+aS' Peru'
+p126
+aS' Philippines'
+p127
+aS' Poland'
+p128
+aS' Portugal'
+p129
+aS' Puerto-Rico'
+p130
+aS' Scotland'
+p131
+aS' South'
+p132
+aS' Taiwan'
+p133
+aS' Thailand'
+p134
+aS' Trinadad&Tobago'
+p135
+aS' United-States'
+p136
+aS' Vietnam'
+p137
+aS' Yugoslavia'
+p138
+atp139
+bsbsVeducation
+p140
+g0
+(g16
+g2
+Ntp141
+Rp142
+(dp143
+g20
+g21
+(g22
+(I0
+tp144
+g24
+tp145
+Rp146
+(I1
+(I16
+tp147
+g31
+I00
+(lp148
+S' 10th'
+p149
+aS' 11th'
+p150
+aS' 12th'
+p151
+aS' 1st-4th'
+p152
+aS' 5th-6th'
+p153
+aS' 7th-8th'
+p154
+aS' 9th'
+p155
+aS' Assoc-acdm'
+p156
+aS' Assoc-voc'
+p157
+aS' Bachelors'
+p158
+aS' Doctorate'
+p159
+aS' HS-grad'
+p160
+aS' Masters'
+p161
+aS' Preschool'
+p162
+aS' Prof-school'
+p163
+aS' Some-college'
+p164
+atp165
+bsbsVmarital-status
+p166
+g0
+(g16
+g2
+Ntp167
+Rp168
+(dp169
+g20
+g21
+(g22
+(I0
+tp170
+g24
+tp171
+Rp172
+(I1
+(I7
+tp173
+g31
+I00
+(lp174
+S' Divorced'
+p175
+aS' Married-AF-spouse'
+p176
+aS' Married-civ-spouse'
+p177
+aS' Married-spouse-absent'
+p178
+aS' Never-married'
+p179
+aS' Separated'
+p180
+aS' Widowed'
+p181
+atp182
+bsbsVoccupation
+p183
+g0
+(g16
+g2
+Ntp184
+Rp185
+(dp186
+g20
+g21
+(g22
+(I0
+tp187
+g24
+tp188
+Rp189
+(I1
+(I15
+tp190
+g31
+I00
+(lp191
+S' ?'
+p192
+aS' Adm-clerical'
+p193
+aS' Armed-Forces'
+p194
+aS' Craft-repair'
+p195
+aS' Exec-managerial'
+p196
+aS' Farming-fishing'
+p197
+aS' Handlers-cleaners'
+p198
+aS' Machine-op-inspct'
+p199
+aS' Other-service'
+p200
+aS' Priv-house-serv'
+p201
+aS' Prof-specialty'
+p202
+aS' Protective-serv'
+p203
+aS' Sales'
+p204
+aS' Tech-support'
+p205
+aS' Transport-moving'
+p206
+atp207
+bsbssS'columns'
+p208
+(lp209
+g15
+ag45
+ag61
+ag73
+ag88
+ag140
+ag166
+ag183
+asbtp210
+a(S'imputer'
+p211
+g0
+(c__main__
+ImputeCategorical
+p212
+g2
+Ntp213
+Rp214
+(dp215
+g211
+g0
+(csklearn.preprocessing.imputation
+Imputer
+p216
+g2
+Ntp217
+Rp218
+(dp219
+S'verbose'
+p220
+I0
+sS'missing_values'
+p221
+I0
+sS'strategy'
+p222
+S'most_frequent'
+p223
+sS'statistics_'
+p224
+g21
+(g22
+(I0
+tp225
+g24
+tp226
+Rp227
+(I1
+(I3
+tp228
+g28
+(S'f8'
+p229
+I0
+I1
+tp230
+Rp231
+(I3
+S'<'
+p232
+NNNI-1
+I-1
+I0
+tp233
+bI00
+S'\x00\x00\x00\x00\x00\x00\x10@\x00\x00\x00\x00\x00\x80C@\x00\x00\x00\x00\x00\x00$@'
+p234
+tp235
+bsS'copy'
+p236
+I01
+sS'axis'
+p237
+I0
+sbsg208
+(lp238
+S'workclass'
+p239
+aS'native-country'
+p240
+aS'occupation'
+p241
+asbtp242
+a(S'classifier'
+p243
+g0
+(csklearn.linear_model.logistic
+LogisticRegression
+p244
+g2
+Ntp245
+Rp246
+(dp247
+S'warm_start'
+p248
+I00
+sS'C'
+p249
+F1.0
+sS'max_iter'
+p250
+I100
+sg220
+I0
+sS'intercept_scaling'
+p251
+I1
+sS'dual'
+p252
+I00
+sS'fit_intercept'
+p253
+I01
+sg20
+g21
+(g22
+(I0
+tp254
+g24
+tp255
+Rp256
+(I1
+(I2
+tp257
+g28
+(S'i8'
+p258
+I0
+I1
+tp259
+Rp260
+(I3
+S'<'
+p261
+NNNI-1
+I-1
+I0
+tp262
+bI00
+S'\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00'
+p263
+tp264
+bsS'solver'
+p265
+S'liblinear'
+p266
+sS'n_iter_'
+p267
+g21
+(g22
+(I0
+tp268
+g24
+tp269
+Rp270
+(I1
+(I1
+tp271
+g28
+(S'i4'
+p272
+I0
+I1
+tp273
+Rp274
+(I3
+S'<'
+p275
+NNNI-1
+I-1
+I0
+tp276
+bI00
+S'\x19\x00\x00\x00'
+p277
+tp278
+bsS'penalty'
+p279
+S'l2'
+p280
+sS'multi_class'
+p281
+S'ovr'
+p282
+sS'random_state'
+p283
+NsS'tol'
+p284
+F0.0001
+sS'n_jobs'
+p285
+I1
+sS'coef_'
+p286
+g21
+(g22
+(I0
+tp287
+g24
+tp288
+Rp289
+(I1
+(I1
+I14
+tp290
+g231
+I00
+S'\xaft\xfe\x07\xae8\x92?\x8d\x19\x0e\xd1\xca\x10\x9b\xbf8Y\x8cN\xa8\x9d\xc0\xbe\xfbi\xa7\xd3/\xbc\x81\xbf\x01\x05\xf3S\x8e_\xac?\xe5\x8f4\x1aB\xc1\xa9\xbfG4gz\x01r\x8f\xbf\xc3\xe1\xae\x87\x1b\xa7\xac\xbf(\xa8\xe8\xf6v7\x87\xbf\x03\xb1\xc0g\xa1\xb4\x82?\x8b\xd1:\x141\xc44?-\x98%\xc3\xea\xdbG?r\xb1$\x81 \x00\x82?\x89\x87\xc9\xe7"\x96\xac\xbf'
+p291
+tp292
+bsS'intercept_'
+p293
+g21
+(g22
+(I0
+tp294
+g24
+tp295
+Rp296
+(I1
+(I1
+tp297
+g231
+I00
+S'o\x94I\xe3\x0e\x8cx\xbf'
+p298
+tp299
+bsS'class_weight'
+p300
+Nsbtp301
+asb.
