@@ -1,0 +1,25 @@
+{
+  "categorical_features": {
+    "decision": [
+      "A", 
+      "S", 
+      "I"
+    ]
+  }, 
+  "feature_names": [
+    "L_CORE", 
+    "L_SURF", 
+    "L_02", 
+    "L_BP", 
+    "SURF_STBL", 
+    "CORE_STBL", 
+    "BP_STBL", 
+    "COMFORT", 
+    "decision"
+  ], 
+  "target_names": [
+    "A", 
+    "S", 
+    "I"
+  ]
+}
