@@ -36,12 +36,11 @@ from sklearn.cross_validation import cross_val_score as cvs
 
 PROGRAM = {
     'description': 'A simple energy efficiency computer',
-    'epilog': 'Report bugs on Github',
-    'version': 'energy v1.0'
+    'epilog': 'Report bugs on Github'
 }
 
 # expects models to be in same directory
-MODEL_DIR  = os.path.dirname(__file__)
+MODEL_DIR = os.path.dirname(__file__)
 HEAT_MODEL = os.path.join(MODEL_DIR, "heating.pickle")
 COLD_MODEL = os.path.join(MODEL_DIR, "cooling.pickle")
 
@@ -64,10 +63,10 @@ def build(args):
     start = time.time()
 
     # Load data and estimator
-    dataset   = load_energy()
-    alphas    = np.logspace(-10, -2, 200)
+    dataset = load_energy()
+    alphas  = np.logspace(-10, -2, 200)
 
-    scores    = {}
+    scores = {}
     for y in ('Y1', 'Y2'):
         # Perform cross validation, don't worry about Imputation here
         clf = linear_model.RidgeCV(alphas=alphas)
@@ -79,18 +78,18 @@ def build(args):
         clf.fit(dataset.data, dataset.target(y))
 
         # Build the model on the entire datset include Imputer pipeline
-        model     = linear_model.Ridge(alpha=clf.alpha_)
-        imputer   = Imputer(missing_values="NaN", strategy="mean", axis=0)
+        model = linear_model.Ridge(alpha=clf.alpha_)
+        imputer = Imputer(missing_values="NaN", strategy="mean", axis=0)
         estimator = Pipeline([("imputer", imputer), ("ridge", model)])
         estimator.fit(dataset.data, dataset.target(y))
 
         # Dump the model
-        jump  = {
+        jump = {
             'Y1': HEAT_MODEL,
             'Y2': COLD_MODEL,
         }
 
-        with open(jump[y], 'w') as f:
+        with open(jump[y], 'wb') as f:
             pickle.dump(estimator, f, protocol=pickle.HIGHEST_PROTOCOL)
 
         msg = (
@@ -99,11 +98,11 @@ def build(args):
             "     model has been dumped to %s\n"
         )
 
-        print msg % (
+        print(msg % (
             y, len(dataset.data), model.__class__.__name__,
             scores[y].mean(), clf.alpha_,
             jump[y],
-        )
+        ))
 
     build_time = time.time() - start
     return "Build took %0.3f seconds" % build_time
@@ -137,9 +136,9 @@ def predict(args):
     ], dtype=np.float)
 
     # Show inputs to the user
-    print "Predicting a value for the input vector:"
-    print "    %s" % str(x)
-    print "Note that nan values will be replaced by means\n"
+    print("Predicting a value for the input vector:")
+    print("    %s" % str(x))
+    print("Note that nan values will be replaced by means\n")
 
     with open(HEAT_MODEL, 'rb') as hp:
         heat_model = pickle.load(hp)
@@ -178,7 +177,7 @@ if __name__ == '__main__':
         (('--glazing-distribution',), {'type': float}),
     )
 
-    pred_parser  = subparsers.add_parser('predict', help='estimate efficiency')
+    pred_parser = subparsers.add_parser('predict', help='estimate efficiency')
     for args, kwargs in predict_arguments:
         pred_parser.add_argument(*args, **kwargs)
     pred_parser.set_defaults(func=predict)
