@@ -1,0 +1,28 @@
+{
+  "target_names": {
+      "0" : "Sangria",
+      "1" : "Poor",
+      "2" : "Below Average",
+      "3" : "Slightly Below Average",
+      "4" : "Average",
+      "5" : "Slightly Above Average",
+      "6" : "Above Average",
+      "7" : "Good",
+      "8" : "Excellent",
+      "9" : "Phenominal"
+  },
+  "feature_names": [
+      "fixed acidity",
+      "volatile acidity",
+      "citric acid",
+      "residual sugar",
+      "chlorides",
+      "free sulfur dioxide",
+      "total sulfur dioxide",
+      "density",
+      "pH",
+      "sulphates",
+      "alcohol",
+      "quality"
+  ]
+}
