@@ -1,0 +1,53 @@
+CREATE TABLE Air_Quality (
+Date	varchar,
+Time	varchar ,
+COGT float,
+PT08CO float,
+NMHCGT float,
+C6H6GT  float,
+PT08nmhc float, 
+NOxGT float,
+PT08NOx  float,
+NO2 float,	
+PT08NO2 float,	
+PT08O3 float, 
+TemperatureC  float,	
+RelHumidity float,
+AHAbHumidity  float
+);
+
+SELECT * FROM Air_Quality
+
+COPY Air_Quality FROM 'C:\Users\franc\Desktop\project\AirQualityUCI\AirQualityUCI2.csv' DELIMITER ',' CSV HEADER;
+
+/* Transforming date and time into timestamp format */
+
+UPDATE Air_Quality SET Date = replace(Date, '/', '-')
+
+
+
+/* Changing columns to date and time */
+
+
+ALTER TABLE Air_Quality
+ALTER COLUMN date TYPE date USING date::date,
+ALTER COLUMN time TYPE time USING "time"::time without time zone;
+
+
+/* Creating a new column that contains date and time together */
+
+ALTER TABLE Air_Quality
+ADD COLUMN Datetime varchar;
+
+UPDATE Air_Quality SET Datetime = CONCAT(date, ' ', time);
+
+ALTER TABLE Air_Quality
+ALTER COLUMN Datetime TYPE timestamp USING datetime::timestamp without time zone;
+
+
+DROP TABLE air_quality
+
+
+
+
+
