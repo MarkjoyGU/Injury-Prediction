@@ -9,4 +9,7 @@ Summmer 2019
 
 Directory structure: 
 Final Code is under: "notebooks"
-Supporting Data:         |----\"data"
+
+Supporting data is: "notebooks/data"
+
+Older notebooks and data: "old"
